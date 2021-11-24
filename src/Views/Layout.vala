@@ -219,7 +219,7 @@ namespace Pantheon.Keyboard {
 
             onscreen_keyboard_settings.clicked.connect (() => {
                 try {
-                    var appinfo = AppInfo.create_from_commandline ("onboard-settings", null, AppInfoCreateFlags.NONE);
+                    var appinfo = AppInfo.create_from_commandline ("@onboard@/bin/onboard-settings", null, AppInfoCreateFlags.NONE);
                     appinfo.launch (null, null);
                 } catch (Error e) {
                     warning ("Unable to launch onboard-settings: %s", e.message);
