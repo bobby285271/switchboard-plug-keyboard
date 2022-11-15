@@ -197,7 +197,7 @@ public class Pantheon.Keyboard.LayoutPage.AddLayoutDialog : Granite.Dialog {
         });
 
         keyboard_map_button.clicked.connect (() => {
-            string command = "gkbd-keyboard-display \"--layout=" + layout_id + "\"";
+            string command = "@libgnomekbd@/bin/gkbd-keyboard-display \"--layout=" + layout_id + "\"";
             try {
                 AppInfo.create_from_commandline (command, null, AppInfoCreateFlags.NONE).launch (null, null);
             } catch (Error e) {
